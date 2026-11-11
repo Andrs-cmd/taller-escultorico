@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Taller Escultórico | Esculturas hechas a mano</title>
+<meta name="description" content="Taller Escultórico: criaturas raras esculpidas y pintadas a mano en Bogotá. Conoce la colección, mira el proceso, encarga la tuya y llévate una pieza única.">
+<meta name="theme-color" content="#f2ebe1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" as="image" href="img/sapo.webp">
+</head>
+<body data-theme="light">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="currentColor"/><path d="M8 24c0-6 5-10 12-10s12 4 12 10c0 4-5 7-12 7S8 28 8 24z" fill="var(--logo-ink,#f2ebe1)"/><circle cx="13" cy="14" r="4.6" fill="var(--logo-ink,#f2ebe1)"/><circle cx="27" cy="14" r="4.6" fill="var(--logo-ink,#f2ebe1)"/><circle cx="13" cy="14" r="1.9" fill="currentColor"/><circle cx="27" cy="14" r="1.9" fill="currentColor"/><path d="M14 24.5q6 3.5 12 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><ellipse cx="16" cy="17" rx="3" ry="4"/><path d="M10.5 18.5c-.4-5 2-9.5 5.5-9.5s6 4.5 5.5 9.5"/><path d="M7.2 20c-.9-7 3.2-14 8.8-14s9.7 7 8.8 14"/><path d="M5 15.5C6.4 8.2 10.6 3.4 16 3.4s9.6 4.8 11 12.1"/><path d="M12.6 25.5c1-1.6 1.6-3.6 1.6-6"/><path d="M19.6 26.8c.9-2 1.4-4.4 1.4-7"/></g></symbol>
+</svg>
+
+<header class="hdr">
+  <a class="brand" href="#inicio" data-go="inicio"><svg class="logo"><use href="#i-logo"/></svg><span>Taller Escultórico</span></a>
+  <nav class="nav" aria-label="Principal">
+    <a href="#inicio" data-go="inicio">Inicio</a>
+    <a href="#coleccion" data-go="coleccion">Colección</a>
+    <a href="#proceso" data-go="proceso">Proceso</a>
+    <a href="#encarga" data-go="encarga">Encarga</a>
+    <a href="#tienda" data-go="tienda" class="nav-cta">Tienda</a>
+  </nav>
+  <button class="sound" id="sound" aria-label="Sonido" aria-pressed="true">
+    <svg viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path class="wv" d="M15.5 9a4 4 0 010 6M18 6.5a7.5 7.5 0 010 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="off" d="M16 9.5l5 5M21 9.5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+</header>
+
+<!-- capas detrás de la pieza -->
+<div class="back" data-for="inicio"><h1 class="giant">TALLER<span>ESCULTÓRICO</span></h1></div>
+<div class="back" data-for="proceso"><div class="mood-word" id="moodWord">ALMA</div></div>
+
+<div id="stage" aria-hidden="true">
+  <div class="halo" id="halo"></div>
+  <div class="shadow" id="shadow"></div>
+  <img class="piece" id="piece" alt="" draggable="false">
+</div>
+
+<!-- INICIO -->
+<section class="panel p-inicio" data-for="inicio" aria-label="Inicio">
+  <div class="open-badge"><i></i>Encargos abiertos &middot; noviembre</div>
+  <p class="cap cap-l">Criaturas raras hechas a mano,<br>una por una</p>
+  <p class="cap cap-r">Figuras, colgantes<br>y encargos a la medida</p>
+  <div class="hero-cta">
+    <a href="#tienda" data-go="tienda" class="btn">Ver las piezas</a>
+    <a href="#encarga" data-go="encarga" class="link">Encarga la tuya <span>&rarr;</span></a>
+  </div>
+  <p class="hint"><svg><use href="#i-paw"/></svg>Mueve el puntero &middot; toca la pieza para saludarla</p>
+  <div class="anchor"></div>
+</section>
+
+<!-- COLECCION -->
+<section class="panel p-razas" data-for="coleccion" aria-label="Colección">
+  <div class="r-left">
+    <span class="r-idx" id="rIdx">01 / 06</span>
+    <h2 class="r-name"><span id="rName"></span></h2>
+    <p class="r-origin" id="rOrigin"></p>
+    <p class="r-desc" id="rDesc"></p>
+  </div>
+  <div class="r-right">
+    <h3>Ficha</h3>
+    <ul class="stats" id="rStats"></ul>
+    <p class="r-ideal"><b>Ideal para</b><span id="rIdeal"></span></p>
+  </div>
+  <div class="r-dots" id="rDots"></div>
+  <div class="anchor"></div>
+</section>
+
+<!-- PROCESO -->
+<section class="panel p-animos" data-for="proceso" aria-label="Proceso">
+  <div class="m-left">
+    <span class="m-step" id="mStep">01 / 05</span>
+    <h2 id="mTitle"></h2>
+    <p id="mDesc"></p>
+  </div>
+  <div class="gauge">
+    <svg viewBox="0 0 200 112"><path class="g-bg" d="M20 100 A80 80 0 0 1 180 100"/><path class="g-val" id="gVal" pathLength="100" d="M20 100 A80 80 0 0 1 180 100"/></svg>
+    <b id="gNum">0%</b>
+    <span>Avance de la pieza</span>
+  </div>
+  <ol class="m-list" id="mList"></ol>
+  <div class="zzz" id="zzz" aria-hidden="true"><i>&#10022;</i><i>&#10023;</i><i>&#10022;</i></div>
+  <div class="anchor"></div>
+</section>
+
+<!-- ENCARGA -->
+<section class="panel p-crea" data-for="encarga" aria-label="Encarga la tuya">
+  <div class="c-panel">
+    <h2>Encarga la tuya</h2>
+    <div class="c-group"><span>Pieza</span><div class="chips" data-opt="tipo"></div></div>
+    <div class="c-group"><span>Paleta</span><div class="sw" data-opt="paleta"></div></div>
+    <div class="c-group"><span>Acabado</span><div class="chips" data-opt="acabado"></div></div>
+    <div class="c-group"><span>Tamaño</span><div class="chips" data-opt="tamano"></div></div>
+  </div>
+  <div class="c-card">
+    <label for="catName">Ponle nombre</label>
+    <input id="catName" maxlength="14" placeholder="Bicho" autocomplete="off">
+    <p class="c-sum" id="cSum"></p>
+    <div class="c-actions">
+      <a class="btn" id="cOrder" href="#" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      <button class="link" id="cDownload">Descargar tarjeta <span>&darr;</span></button>
+      <button class="link" id="cRandom">Aleatorio <span>&#8635;</span></button>
+    </div>
+  </div>
+  <div class="bubble" id="bubble">¡Hola!</div>
+  <div class="anchor"></div>
+</section>
+
+<!-- TIENDA -->
+<section class="panel p-adopta" data-for="tienda" aria-label="Tienda">
+  <div class="a-head">
+    <h2>Llévate una pieza</h2>
+    <p>Piezas únicas, pintadas y barnizadas a mano. Cuando se van, no vuelven.</p>
+  </div>
+  <div class="cards" id="cards"></div>
+  <div class="a-info">
+    <div><b>Envíos</b><span>A toda Colombia</span></div>
+    <div><b>Taller</b><span>Bogotá, Colombia</span></div>
+    <form class="sub" id="sub">
+      <label for="email">Avísame del próximo drop, una vez al mes</label>
+      <div class="sub-row"><input id="email" type="email" placeholder="tu@correo.com" required><button>Suscribirme</button></div>
+      <p class="sub-ok" id="subOk" hidden>¡Listo! Te escribiremos pronto.</p>
+    </form>
+  </div>
+  <footer class="foot">
+    <span>&copy; 2026 Taller Escultórico &middot; Esculturas hechas a mano</span>
+    <span>Desarrollado por <a href="https://sellu.co" target="_blank" rel="noopener">Sell-U Latam</a></span>
+  </footer>
+  <div class="anchor"></div>
+</section>
+
+<div class="arrows">
+  <button id="up" aria-label="Anterior"><svg><use href="#i-up"/></svg></button>
+  <button id="down" aria-label="Siguiente"><svg><use href="#i-down"/></svg></button>
+</div>
+
+<main class="scroller">
+  <div class="sec" id="inicio" data-steps="1"></div>
+  <div class="sec" id="coleccion" data-steps="6"></div>
+  <div class="sec" id="proceso" data-steps="5"></div>
+  <div class="sec" id="encarga" data-steps="1"></div>
+  <div class="sec" id="tienda" data-steps="1"></div>
+</main>
+
+<div class="laser" id="laser" aria-hidden="true"></div>
+<div class="fx" id="fx" aria-hidden="true"></div>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mdName">
+    <button class="modal-x" id="mdClose" aria-label="Cerrar">&times;</button>
+    <img id="mdImg" alt="">
+    <h3 id="mdName"></h3>
+    <p class="md-meta" id="mdMeta"></p>
+    <p id="mdText"></p>
+    <a class="btn" id="mdCta" href="#" target="_blank" rel="noopener">La quiero</a>
+  </div>
+</div>
+
+<div class="loader" id="loader"><svg class="logo"><use href="#i-logo"/></svg></div>
+<script src="app.js"></script>
+</body>
+</html>
