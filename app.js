@@ -2,7 +2,7 @@
 'use strict';
 
 /* ---------- datos de contacto (cámbialos aquí) ---------- */
-const WHATSAPP = ''; // número con indicativo, sin + ni espacios. Ej: '573001234567'
+const WHATSAPP = '573195768097'; // número con indicativo, sin + ni espacios. Ej: '573001234567'
 const wa = (txt) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`;
 
 const $ = (s, el = document) => el.querySelector(s);
