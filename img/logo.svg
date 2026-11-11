@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Taller Escultórico">
+  <title>Taller Escultórico</title>
+  <defs><clipPath id="c"><circle cx="50" cy="50" r="50"/></clipPath></defs>
+  <circle cx="50" cy="50" r="50" fill="#1c1917"/>
+  <g clip-path="url(#c)">
+    <!-- astas -->
+    <g fill="none" stroke="#e8b739" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M43 43 41 21M57 43 59 21"/>
+      <path d="M35 47 24 38 27 24M24 38 14 26M24 38 10 38"/>
+      <path d="M65 47 76 38 73 24M76 38 86 26M76 38 90 38"/>
+    </g>
+    <!-- orejas y capucha -->
+    <g fill="#f2ebe1">
+      <path d="M32 60C27 50 14 46 6 52c3 10 16 16 26 14z"/>
+      <path d="M68 60c5-10 18-14 26-8-3 10-16 16-26 14z"/>
+      <ellipse cx="50" cy="63" rx="20" ry="22"/>
+    </g>
+    <g fill="#1c1917" opacity=".3">
+      <path d="M28 59c-4-5-12-7-17-5 3 5 10 8 17 8z"/>
+      <path d="M72 59c4-5 12-7 17-5-3 5-10 8-17 8z"/>
+    </g>
+    <!-- cara carmesí -->
+    <ellipse cx="50" cy="64" rx="13" ry="16" fill="#c8283a"/>
+    <ellipse cx="45" cy="56" rx="4" ry="2.2" fill="#fff" opacity=".28" transform="rotate(-24 45 56)"/>
+    <g fill="#4a0d16">
+      <ellipse cx="45" cy="70" rx="3.1" ry="3.7"/>
+      <ellipse cx="55" cy="70" rx="3.1" ry="3.7"/>
+      <circle cx="48.4" cy="76.6" r=".9"/>
+      <circle cx="51.6" cy="76.6" r=".9"/>
+    </g>
+  </g>
+</svg>
